@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<meta charset="UTF-8"> 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>東吳大學導覽介紹</title>
     <style>
         body {
-            margin: 0;
-            padding: 20px;
             font-family: "Microsoft JhengHei", sans-serif;
             background-color: #fcfaf2; 
             color: #333;
@@ -30,13 +27,13 @@
             align-items: flex-start;
         }
 
-        .sidebar {
+        .sidebar {  /* 左選單 */
             width: 260px;
             background-color: white;
             border: 2px solid #333;
         }
 
-        .sidebar-title {
+        .sidebar-title {  /* 大樓介紹選單項目 */
             background-color: #d32f2f;
             color: white;
             padding: 15px;
@@ -45,62 +42,56 @@
             font-size: 1.1rem;
         }
 
-        .sidebar ol {
+        .sidebar ol { /* 選單項目 */
             list-style: none;
             padding: 0;
             margin: 0;
-            max-height: 600px;
-            overflow-y: auto;
+            max-height: 550px;
+            overflow-y: auto; /* 自動出現捲軸 */
         }
 
         .sidebar li {
             padding: 12px 20px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #333;
             background-color: beige;
-            cursor: pointer;
-            transition: all 0.2s ease;
+            cursor: pointer; /* 變可滑鼠點擊 */
             display: flex;
             align-items: center;
         }
 
-        .sidebar li::before {
+        .sidebar li::before {  /* . */
             content: "•";
             margin-right: 10px;
             color: #d32f2f;
             font-weight: bold;
         }
 
-        .sidebar li:hover {
+        .sidebar li:hover {  
             background-color: #f0f0e0;
-            padding-left: 30px;
+            padding-left: 30px; /* 文字往右縮排 */
             color: #d32f2f;
         }
 
-        .sidebar li:last-child {
-            border-bottom: none;
-        }
-
-        .content-area {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .image-display {
+   
+        .image-display { /* 右側圖片 */
             background-color: white;
             border: 2px solid #333;
-            padding: 20px;
+            padding: 20px;   
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 500px;
+            min-height: 550px;
+            flex-direction: column; /* 讓圖片一張接一張垂直排列 */
+            align-items: center;    /* 圖片置中 */
+            gap: 20px;              /* 每張圖片之間的間隔 */
+            max-height: 550px; /* 選單限制在 600px 高度 */
+            overflow-y: auto; /* 自動出現捲軸 */
         }
-
-        .image-display img {
+        .image-display img { /* 控制圖片大小 */
             max-width: 100%;
-            height: auto;
             border: 1px solid #ccc;
         }
+       
     </style>
 </head>
 <body>
@@ -130,7 +121,7 @@
                 <li>P 棟</li>
                 <li>Q 棟</li>
                 <li>R 棟</li>
-                <li>探場</li>
+                <li>操場</li>
             </ol>
         </nav>
 
@@ -139,8 +130,10 @@
                 目前位置：顯示路徑
             </div>
             <div class="image-display">
-                <img src="H/801.jpg" alt="校園地圖">
-            </div>
+                <img src="H/801.jpg" >
+                <img src="H/802.jpg" >
+                <img src="H/803.jpg" >
+                <img src="H/804.jpg" >
         </main>
     </div>
 
