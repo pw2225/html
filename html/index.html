@@ -1,39 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>東吳大學導覽介紹</title>
     <style>
-        li{
-            background-color: beige;
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: "Microsoft JhengHei", sans-serif;
+            background-color: #fcfaf2; 
+            color: #333;
         }
-        </style>
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d32f2f;
+            padding-bottom: 10px;
+        }
+
+        .logo {
+            margin-right: 15px;
+        }
+        .main-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .sidebar {
+            width: 260px;
+            background-color: white;
+            border: 2px solid #333;
+        }
+
+        .sidebar-title {
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .sidebar ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .sidebar li {
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+            background-color: beige;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar li::before {
+            content: "•";
+            margin-right: 10px;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        .sidebar li:hover {
+            background-color: #f0f0e0;
+            padding-left: 30px;
+            color: #d32f2f;
+        }
+
+        .sidebar li:last-child {
+            border-bottom: none;
+        }
+
+        .content-area {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .image-display {
+            background-color: white;
+            border: 2px solid #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 500px;
+        }
+
+        .image-display img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+    </style>
 </head>
 <body>
-    <img src="logo.png" width="60" height="60" style="float:left;"/>
-    <h1>東吳大學</h1>
-    <hr/>
-    <ol type="I">
-        <li>A棟</li>
-        <li>B棟</li>
-        <li>C棟</li>
-        <li>D棟</li>
-        <li>E棟</li>
-        <li>F棟</li>
-        <li>G棟</li>
-        <li>H棟</li>
-        <li>I棟</li>
-        <li>K棟</li>
-        <li>L棟</li>
-        <li>M棟</li>
-        <li>N棟</li>
-        <li>P棟</li>
-        <li>Q棟</li>
-        <li>R棟</li>
-        <li>操場</li>
 
-        <img src="H/801.jpg" width="700" height="500" >
-    
+    <header>
+        <img src="logo.png" width="60" height="60" class="logo" alt="東吳校徽">
+        <h1>東吳大學校園導覽</h1>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="sidebar-title">大樓介紹選單項目</div>
+            <ol>
+                <li>A 棟</li>
+                <li>B 棟</li>
+                <li>C 棟</li>
+                <li>D 棟</li>
+                <li>E 棟</li>
+                <li>F 棟</li>
+                <li>G 棟</li>
+                <li>H 棟</li>
+                <li>I 棟</li>
+                <li>K 棟</li>
+                <li>L 棟</li>
+                <li>M 棟</li>
+                <li>N 棟</li>
+                <li>P 棟</li>
+                <li>Q 棟</li>
+                <li>R 棟</li>
+                <li>探場</li>
+            </ol>
+        </nav>
+
+        <main class="content-area">
+            <div class="path-bar">
+                目前位置：顯示路徑
+            </div>
+            <div class="image-display">
+                <img src="H/801.jpg" alt="校園地圖">
+            </div>
+        </main>
+    </div>
+
 </body>
-</html> 
+</html>
